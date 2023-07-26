@@ -18,14 +18,8 @@ ll lucky(ll n) {
 int main() {
 	ll n;
 	cin >> n;
-	ll c  = lucky(n);
-	if (c >= 10) {
-		if (lucky(c) == to_string(c).length()) {
-			cout << "YES\n";
-		} else {
-			cout << "NO\n";
-		}
-	} else if (c == 4 || c == 7) {
+	int c  = lucky(n);
+	if (c == 4 || c == 7) {
 		cout << "YES\n";
 	} else {
 		cout << "NO\n";
