@@ -1,15 +1,11 @@
-#include <iostream>
+#include <bits/stdc++.h>
+
 using namespace std;
 
 int main() {
-	int k, n ,w;
-	cin >> k >> n >> w;
-	for (int i = 1; i <= w; i++) {
-		n-=i*k;
-	}
-	if (n > 0) {
-		cout << 0;
-	} else {
-		cout << abs(n);
-	}
+	int k, n, w;
+	cin >> k;
+	cin >> n;
+	cin >> w;
+	cout << max(0, (k * ( w * (w + 1) / 2 ) - n)) << "\n";
 }
